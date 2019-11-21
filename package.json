@@ -1,0 +1,19 @@
+{
+  "name": "holding-kim-potter-dog-training",
+  "version": "1.0.0",
+  "description": "My exceptional Nuxt.js project",
+  "author": "Jon Whittlestone",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --port 3333",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0"
+  }
+}
