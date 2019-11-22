@@ -93,7 +93,7 @@ export default {
         },
         async triggerSendMessageFunction () {
           try {
-            const response = await this.$axios.$post('/.netlify/functions/send-contact-email', {
+            const response = await this.$axios.$post('.netlify/functions/send-contact-email', {
               contactName: this.contactName,
               contactEmail: this.contactEmail,
               message: this.contactMessage
