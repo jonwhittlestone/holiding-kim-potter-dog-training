@@ -8,7 +8,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "lambda-build": "netlify-lambda build ./functions",
+    "lambda-serve": "netlify-lambda serve ./functions"
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.8.4",
