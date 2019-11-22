@@ -93,17 +93,15 @@ export default {
         },
         async triggerSendMessageFunction () {
           try {
-            console.debug('here');
             const response = await this.$axios.$post('/.netlify/functions/send-contact-email', {
               contactName: this.contactName,
               contactEmail: this.contactEmail,
               message: this.contactMessage
             })
-            // this.resetForm()
-            // this.messages.push({ type: 'success', text: response })
+            this.resetForm()
+            this.messages.push({ type: 'success', text: response })
           } catch (error) {
-            // this.messages.push({ type: 'error', text: error.response.data })
-            console.log('error');
+            this.messages.push({ type: 'error', text: error.response.data })
           }
         }
       }
