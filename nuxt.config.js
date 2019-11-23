@@ -43,11 +43,18 @@ export default {
     '@nuxtjs/axios',
   ],
 
-  proxy: {
-    '/.netlify/functions/': {
-      target: 'http://localhost:9000'
-    }
+  /*
+   ** Axios config
+   */
+  axios: {
+    baseURL: '/'
   },
+
+  // proxy: {
+  //   '/.netlify/functions/': {
+  //     target: 'http://localhost:9000'
+  //   }
+  // },
   /*
   ** Build configuration
   */
