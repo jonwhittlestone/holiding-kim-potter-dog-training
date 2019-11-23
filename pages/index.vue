@@ -1,22 +1,23 @@
 <template>
   <div>
-    <div class="flex-center position-ref full-height">
+    <div class="flex-center mt-24 position-ref full-height">
       <div class="content">
         <div class="title m-b-md">Kim Potter Dog Training</div>
 
-        <div class="title m-b-md"><small><em>Website Coming Soon</em> <br>Tel: (07941) 392 521 </small></div>
+        <div class="pb-24 text-4xl"><small><em>Website Coming Soon</em> <br>Tel: (07941) 392 521 </small></div>
 
-        <div class="links">
+        <div class="links pb-12">
             <a href="">Pets and Children</a>
             <a href="">House Training Puppies</a>
             <a href="">Toilet Training Puppies</a>
             <a href="">Aggression Problems</a>
             <a href="">Good Manners</a>
         </div>
-        <div class="contact">Contact <a href="caninetrainerkp@gmail.com">caninetrainerkp@gmail.com</a></div>
+        <div class="pb-12">
+          <a href="caninetrainerkp@gmail.com">caninetrainerkp@gmail.com</a>
+        </div>
         
         <!-- contact form -->
-
         <article v-for="msg in messages"
           :key="msg.text"
           class="message"
@@ -27,37 +28,36 @@
         </article>
 
 
-        <section class="contact-form">
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input v-model="contactName" class="input" type="text">
+        <section class="contact-form w-1/2 mx-auto text-left p-6">
+          <div class="row flex">
+            <div class="field col w-1/2 pr-4">
+              <label class="label">Name</label>
+              <div class="control">
+                <input v-model="contactName" class="input w-full border border-gray-700" type="text">
+              </div>
+            </div>
+
+            <div class="field col w-1/2">
+              <label class="label">Email</label>
+              <div class="control">
+                <input v-model="contactEmail" class="input w-full border border-gray-700" type="email">
+              </div>
+            </div> <!-- /.field -->
+
+          </div>
+          <div class="row pt-4">
+            <div class="field col">
+              <label class="label">Your Message</label>
+              <div class="control">
+                <textarea v-model="contactMessage" class="textarea border w-full border-gray-700" />
+              </div>
             </div>
           </div>
 
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-              <input v-model="contactEmail" class="input" type="email">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Your Message</label>
-            <div class="control">
-              <textarea v-model="contactMessage" class="textarea" />
-            </div>
-          </div>
-
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link" @click="sendMessage">
+          <div class="field is-grouped py-4">
+            <div class="control text-center">
+              <button class="button is-link border-gray-700 border px-4" @click="sendMessage">
                 Send Message
-              </button>
-            </div>
-            <div class="control">
-              <button class="button is-text" @click="cancelMessage">
-                Cancel
               </button>
             </div>
           </div>
